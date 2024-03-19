@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(247, 241, 235, 0.815);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+}
+
+.brand{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+}
+.brand:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.brand a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.brand a:hover {
+  color:rgba(180, 98, 22, 0.836);
+  
+}
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(7, 7, 7);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:rgba(180, 98, 22, 0.836);
+  font-weight: 900;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(5, 41, 21, 0.205);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roboto Mono", monospace;
+  width: 80%;
+}
+
+.about-content{
+
+}
+
+.about h2{
+  margin-top: 3em;
+  margin-bottom: 2em;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.about p{
+  text-align: left;
+  line-height: 30px;
+}
+
+
+#contact-form-container{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  font-family: "Roboto Mono", monospace;
+  text-align: center; 
+  margin-top: 5em;
+  margin-bottom: 5em;
+  flex-wrap: wrap;
+}
+
+#contact-form{
+  width: 30vw;
+  overflow: hidden;
+}
+#contact-form label{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#contact-form p{
+  font-size: small;
+  padding: 10px;
+}
+
+#contact-form input{
+ width: 100%;
+ height: 30px;
+ font-family: "Roboto Mono", monospace ;
+ border:  1px solid rgba(63, 63, 63, 0.514);
+ border-radius: 10px;
+}
+
+
+#contact-form textarea{
+  width: 100%;
+  height: 250px;
+  font-family: "Roboto Mono", monospace ;
+  border:  1px solid rgba(63, 63, 63, 0.514);
+  border-radius: 10px;
+}
+#contact-form button{
+  width: 100%;
+  height: 50px;
+  font-size: medium;
+  font-family: "Roboto Mono", monospace ;
+  border:  1px solid rgba(63, 63, 63, 0.514);
+  background-color: rgba(255, 255, 255, 0.568);
+  color: rgb(65, 65, 65);
+  border-radius: 10px;
+}
+
+#contact-form button:hover{
+  background-color:  rgba(63, 63, 63, 0.329);
+  color: white;
+  border: white;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 850px){
+  
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .brand{
+    font-size: large;
+  }
+
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar a {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 8px;
+
+  }
+  .dropdown .dropbtn {
+    font-size: 12px;  
+    padding: 8px 8px;
+  }
+
+  .container{
+    justify-content: center;
+  }
+  .about{
+    width: 90%;
+  }
+
+  .about h2{
+    font-size: large;
+    font-weight: 700;
+    margin-bottom: 2em;
+  }
+
+  .about p{
+    font-size: small;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 20px;
+  }
+
+  #contact-form{
+    width: 80%;
+  }
+
+  #contact-form label{
+    font-size: 20px;
+  }
+
+  #contact-form p{
+    font-size: 10px;
+  }
+
+  #contact-form input{
+    width: 100%;
+    height: 20px;
+  }
+
+  #contact-form button{
+    height: 30px;
+    font-size: 15px;
+  }
+
+
+}
+
+
+
+

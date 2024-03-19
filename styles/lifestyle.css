@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(247, 241, 235, 0.815);
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.brand{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+}
+.brand:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.brand a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.brand a:hover {
+  color:rgba(180, 98, 22, 0.836);
+  
+}
+
+header h1{
+  font-family:"Roboto Mono", monospace;
+  font-size: 30px;
+}
+
+.navbar {
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(7, 7, 7);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+#gallery-nav {
+  font-weight: 900;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:rgba(180, 98, 22, 0.836);
+  font-weight: 900;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(5, 41, 21, 0.205);;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#lifestyle-gallery{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column{
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+
+}
+
+#column img{
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    header{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .brand{
+    font-size: large;
+  }
+
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar a {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 8px;
+
+  }
+  .dropdown .dropbtn {
+    font-size: 12px;  
+    padding: 8px 8px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}

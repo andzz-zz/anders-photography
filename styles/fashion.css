@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(247, 241, 235, 0.815);
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.brand{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+}
+.brand:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.brand a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.brand a:hover {
+  color:rgba(180, 98, 22, 0.836);
+  
+}
+
+header h1{
+  font-family:"Roboto Mono", monospace;
+  font-size: 30px;
+}
+
+.navbar {
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(7, 7, 7);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+#gallery-nav {
+  font-weight: 900;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:rgba(180, 98, 22, 0.836);
+  font-weight: 900;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(5, 41, 21, 0.205);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.carousel {
+  width: 80vw;
+  height: calc(100vh - 117px);
+  position: relative;
+  margin: auto;
+
+}
+
+.carousel > ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slide[data-active]{
+  opacity: 1;
+  transition-delay: 0;
+}
+
+.carousel-button{
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(187, 184, 184, 0.377);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color:  rgba(63, 63, 63, 0.514);
+  bottom: rgba(0,0,0,0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev{
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+
+@media  screen and (max-width: 768px){
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand {
+    font-size: large;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar a {
+    font-size: 12px;
+    color: rgb(7, 7, 7);
+    padding: 8px 8px;
+  }
+  
+.dropdown .dropbtn {
+  font-size: 12px;  
+  padding: 8px 8px;
+}
+
+.carousel{
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide img{
+  width: 100%;
+
+}
+
+.carousel-button{
+  font-size: 1rem;
+}
+}
+
+@media  screen and (max-width: 550px){
+
+  .carousel{
+    margin-top: -3em;
+  }
+
+  .slide{
+    margin-top: 30px;
+  }
+
+.slide img{
+  object-fit:contain;
+}
+}

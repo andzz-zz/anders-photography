@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(247, 241, 235, 0.815);
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  padding: 0 30px   ;
+}
+
+.brand{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+}
+.brand:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.brand a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.brand a:hover {
+  color:rgba(180, 98, 22, 0.836);
+  
+}
+
+header h1{
+  font-family:"Roboto Mono", monospace;
+  font-size: 30px;
+}
+
+.navbar {
+  overflow: hidden;
+}
+.container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(7, 7, 7);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+#gallery-nav {
+  font-weight: 900;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color:rgba(180, 98, 22, 0.836);
+  font-weight: 900;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(5, 41, 21, 0.205);;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+img, 
+.home-gallery-content {
+  transition: 0.7s all;
+  border-radius: 3px;
+}
+.home-gallery{
+  position: relative;
+  margin: 0.5%;
+  max-width: 31%;
+  float: left;
+}
+.home-gallery .home-gallery-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  color: fff;
+  opacity: 0;
+}
+
+.home-gallery a{
+  text-decoration: none;
+  color: white;
+}
+
+.home-gallery h2:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: white;
+}
+.home-gallery .home-gallery-content h2{
+  padding-top: 35%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.home-gallery:hover .home-gallery-content{
+  opacity: 1;
+}
+.home-gallery:hover img{
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.mix-gallery{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+}
+
+.mix-gallery img{
+
+    height: 500px;
+    width:400px;
+    object-fit: cover;
+
+}
+
+
+.mix-gallery div{
+  padding: 10px;
+  height: auto ;
+}
+
+
+.introduction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: calc(100vh - 150px);
+  text-align: left;
+  flex-direction: column;
+  background-image: url(../images/photograph.jpg);
+  background-size:cover;
+  background-repeat:  no-repeat;
+}
+
+.message-container{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: left;
+
+}
+ #intro-message{
+  font-family: "Archivo Black", sans-serif;
+  font-size: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #f9f9f9;
+}
+
+.animated-message {
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  color: #f9f9f9;
+}
+  
+
+
+span#words{
+  font-weight: 300;
+  font-size: 40px;
+  margin: 0;
+}
+
+
+.introduction button{
+  width: 150px;
+  height: 50px;
+  font-family: "Roboto Mono", monospace;
+  font-size: medium;
+  font-weight: 500;
+  border: none;
+  background-color: rgba(255, 254, 252, 0.205);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.introduction button:hover{
+  background-color: rgba(255, 255, 255, 0.753);
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
+  font-weight: 900;
+}
+
+
+/*Responsive*/
+
+
+@media screen and (max-width: 1150px){
+  .home-gallery{
+    max-width: 48%;
+    margin: 1%;
+  }
+}
+
+@media  screen and (max-width: 800px){
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .introduction{
+    height: 80vh;
+    width: 100%;
+  }
+  .message-container{
+    max-width: 80%;
+  }
+  #intro-message {
+    font-size:35px;
+  }
+
+  .animated-message, span#words{
+    font-size: 20px;
+  }
+
+
+
+  .introduction button{
+    width: 100px;
+    font-size: small;
+  }
+
+.home-gallery{
+  float: none;
+  max-width: 80%;
+  margin: 1% auto;
+}
+}
+
+@media  screen and (max-width: 450px) {
+    
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    margin-top: 40px;
+
+  }
+  .brand {
+    font-size: large;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar a {
+    font-size: 12px;
+    color: rgb(7, 7, 7);
+    padding: 8px 8px;
+  }
+  
+.dropdown .dropbtn {
+  font-size: 12px;  
+  padding: 8px 8px;
+}
+.introduction{
+  margin-top: 50px;
+  height: 80vh;
+  overflow: hidden;
+}
+
+
+
+.message-container{
+  max-width: 90%;
+  margin-top: -3em;
+}
+
+.home-gallery, img{
+  float: none;
+  max-width: 100%;
+  margin: 1% auto;
+}
+
+#intro-message{
+  font-size: 20px;
+}
+
+.animated-message h3 {
+  font-size: small;
+ 
+}
+span#words {
+  font-size: small;
+}
+
+.introduction button{
+  width: 75px;
+  height: 30px;
+  font-size: 10px;
+}
+}
